@@ -1,0 +1,100 @@
+﻿@model prueba.Models.MapFolder
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DOCUMENTACIÓN DE PRODUCTO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link, a:visited, a:hover, a:active {
+            color: #0f0;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: #c0c;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #cabecera {
+            color: #000000;
+            background-color: darkcyan;
+            height: 60px;
+            width: auto;
+        }
+
+        #menu {
+            background-color: #ffffff;
+            padding: 35px;
+            font-family: Candara;
+            font-size: 30px;
+        }
+
+        input[type=submit] {
+            padding: 5px 15px;
+            background: #ffffff;
+            border: 0 none;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-family: 'Arial Rounded MT';
+        }
+
+        input:hover[type=submit] {
+            background: #d0d0d0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="cabecera">
+        @using (Html.BeginForm("Menu", "Home", FormMethod.Post))
+
+        {<center>
+                <div></div><br />
+                <label style="color:#ffffff;"><label style="color:#000000;"></label><b>Ingresa el número de parte</b></label>
+                <input name="patron" id="buscar" type="text" />
+                <input type="submit" value="BUSCAR" />
+            </center>
+        }
+    </div>
+
+   
+
+    @Model.Folder
+    <br />
+    @foreach (var folder in Model.Folders)
+    {
+        @*@Html.RenderPartial("_folder.cshtml", model=folder);*@
+
+        @*<partial name="_folder.cshtml" model="folder"/>*@
+        @Html.Partial("_folder", folder);
+    }
+
+    <br />
+    @foreach (var archi in Model.Files)
+    {
+        <h6>@archi.NameUrl</h6>
+    }
+
+</body>
+</html>

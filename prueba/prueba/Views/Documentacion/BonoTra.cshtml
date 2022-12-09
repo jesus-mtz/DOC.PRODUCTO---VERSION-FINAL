@@ -1,0 +1,379 @@
+﻿@{
+    Layout = null;
+}
+
+<h1 style="text-align: center;">BONO DE TRABAJO</h1>
+<form>
+    <div style="border: none; width: 35%; ">
+        <fieldset style="width: 90%; ">
+            <legend style="text-align:center">DATOS DE LA PARTE</legend>
+            <div>
+                <label>Turno:</label>
+
+                <input type="radio" id="prim" name="prim" value="prim" />
+                <label for="prim">1ro</label>
+
+                <input type="radio" id="seg" name="seg" value="seg" />
+                <label for="seg">2do</label>
+
+                <input type="radio" id="ter" name="ter" value="ter" />
+                <label for="ter">3ro</label>
+            </div>
+            <hr />
+
+            <div>
+                <label for="staticEmail">N° de parte Woco: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Nombre de la parte: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Orden de trabajo: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+            </div>
+        </fieldset>
+    </div><br /><br />
+
+    <div style="border: none; width: 35%; ">
+        <fieldset style="width: 90%;  ">
+            <legend style="text-align:center">LOTES DE FABRICACIÓN</legend>
+            <div>
+                <label for="staticEmail">Semana (WIP): </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Fecha: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Maquina: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+            </div>
+        </fieldset>
+    </div><br /><br />
+
+    <div style="border: none; width: 35%; ">
+        <fieldset style="width: 90%; ">
+            <legend style="text-align:center">DATOS GENERALES</legend>
+            <div>
+                <label for="staticEmail">Grabado pieza inicial: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Grabado pieza final: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Cant. piezas con las <br />que se recibe el turno: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Horas efectivas: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Piezas por caja: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Cantidad de cajas producidas: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Cantidad caja parcial: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+
+                <label for="staticEmail">Total piezas producidas: </label>
+                <input type="text" class="form-control" id="staticEmail"> <br /><br />
+            </div>
+        </fieldset>
+    </div><br /><br />
+
+
+    <div>
+        <fieldset style="width: 90%; ">
+            <legend style="text-align:center">COMPONENTES/MATERIA PRIMA</legend>
+            <table border="1">
+                <tr>
+                    <th>N°</th>
+                    <th>Número de la parte</th>
+                    <th style="width:30%">Nombre de la parte</th>
+                    <th>Referencia Woco</th>
+                    <th style="width:30%">Lote/Batch del proveedor</th>
+                    <th>Fechador</th>
+                </tr>
+
+                <tr>
+                    <th>1</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>11</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>13</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>14</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>15</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>16</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>17</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>18</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>19</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>20</th>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </div><br /><br />
+
+    <div>
+        <fieldset style="width: 90%; ">
+            <legend style="text-align:center">REPORTE DE SCRAP POR TURNO</legend>
+            <table border="1">
+                <tr>
+                    <th style="width:24%" rowspan="3">Código de scrap</th>
+                    <th style="width:37%">Descripcion de falla scrap</th>
+                    <th>Hora 1</th>
+                    <th>Hora 2</th>
+                    <th>Hora 3</th>
+                    <th>Hora 4</th>
+                    <th>Hora 5</th>
+                    <th>Hora 6</th>
+                    <th>Hora 7</th>
+                    <th>Hora 8</th>
+                    <th>Hora 9</th>
+                </tr>
+
+                <tr>
+                    <th>Piezas buenas</th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+
+                <tr>
+                    <th>Piezas Malas</th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+
+                <tr>
+                    <th><input type="text" class="form-control" style="width:100%"></th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+
+                <tr>
+                    <th><input type="text" class="form-control" style="width:100%"></th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+
+                <tr>
+                    <th><input type="text" class="form-control" style="width:100%"></th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+
+                <tr>
+                    <th><input type="text" class="form-control" style="width:100%"></th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+
+                <tr>
+                    <th><input type="text" class="form-control" style="width:100%"></th>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                    <td><input type="text" class="form-control" style="width:100%"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</form>

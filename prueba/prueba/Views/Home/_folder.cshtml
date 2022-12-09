@@ -1,0 +1,24 @@
+﻿@model prueba.Models.MapFolder
+
+
+<div style="padding-left: initial; border: groove; width: 300px;  ">
+    <p style="font-family: 'Courier New';"> @Model.Folder </p>
+
+    <br />
+    <div style="background-color: darkcyan">
+        @foreach (var folder in Model.Folders)
+        {
+
+            @Html.Partial("_folder", folder);
+        }
+    </div >
+    <div style="background-color: #D1FCF1 ">
+
+
+        @foreach (var archi in Model.Files)
+        {
+            <h4 style="font-size: 14px; font-family: 'Comic Sans MS';"> @archi.NameUrl</h4>
+            <br />
+        }
+    </div>
+</div>

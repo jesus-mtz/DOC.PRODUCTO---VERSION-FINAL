@@ -1,0 +1,32 @@
+﻿@model prueba.Models.FolderMap
+
+
+<div style=" border: groove; width: 450px; font-family: Candara; font-size: 18px; background-color:darkcyan; color:white">
+    <h3>@Model.Folder </h3>
+
+    <div style=" border: groove; width: contain; height: contain; font-size: 19px; background-color: white">
+        <ul>
+
+            @if (Model.Files.Count == 0 && Model.Folders.Count == 0)
+            {
+                <li style="color:black">No hay archivos</li>
+            }
+            else
+            {
+                foreach (var filee in Model.Files)
+                {
+
+                    <a href="@Html.Raw($"/DOCUMENTACION/{filee.NameUrl}")" style="color:#000;">@filee.Name</a>
+
+                    <br />
+                    <br />
+                }
+
+                foreach (var folder in Model.Folders)
+                {
+                    @Html.Partial("_MapFolder", folder)
+                }
+            }
+        </ul>
+    </div>
+</div>

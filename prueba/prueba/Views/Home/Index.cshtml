@@ -1,0 +1,126 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DOCUMENTACIÓN DE PRODUCTO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link, a:visited, a:hover, a:active {
+            color: #0f0;
+            font-size: 16px;
+        }
+
+        body {
+            /*      background: #eee;*/
+            font-family: verdana;
+        }
+
+        h1 {
+            color: #c0c;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #cabecera {
+            color: #000000;
+            background-color: darkcyan;
+            height: 50px;
+            width: 1510.55px;
+        }
+
+
+        #contenido {
+            float: left;
+            /*  height: 595px;
+            width: 1182.225px;*/
+        }
+
+        #menu {
+            background-color: #ffffff;
+            /* border:solid;
+            border-color:#000000;*/
+            float: left;
+/*            height: 555px;*/ 
+            height: auto;
+            width: 250px;
+            padding: 20px;
+        }
+
+
+        /*}*/
+    </style>
+
+</head>
+<body>
+    <div id="cabecera">
+
+        @using (Html.BeginForm("Buscar", "Home", FormMethod.Post))
+        {<center>
+                <div></div><br />
+                <label style="color:#ffffff;"><label style="color:#000000;"></label><b>Ingresa el número de parte</b></label>
+                <input name="patron" id="buscar" type="text" />
+                <input type="submit" value="BUSCAR" />
+            </center>
+        }
+
+
+    </div>
+    @if (ViewBag.listaArchivos != null)
+    {<div id="menu">
+
+
+
+            @for (int i = 0; i < ViewBag.listaArchivos.Count; i++)
+
+            {
+                <ul>
+                    <li>
+                        @*<a href="@Url.Action("Index", "Home", new { buscar= ViewBag.carpeta,archivo = @ViewBag.listaArchivos[i].ToString() })" style="color:#000;"><b>@ViewBag.listaArchivos[i].ToString()</b></a>
+                        <a href="@Url.Action("Descargar", "Home", new { buscar= ViewBag.carpeta,archivo = @ViewBag.listaArchivos[i].ToString() })">Descargar</a>*@
+                        <a href="@Html.Raw($"10.46.11.102:4090/Procesos/{ViewBag.carpeta}/{ViewBag.listaArchivos[i].ToString()}")" style="color:#000;">@ViewBag.listaArchivos[i].ToString()</a>
+                    </li>
+                </ul>
+            }
+
+        </div>}
+    <div id="contenido">
+
+        @if (ViewBag.archivo != null)
+        {
+
+            <object data="~/DOCUMENTO.pdf" type="application/pdf" height="600" width="950"></object>
+        }
+        else
+        {
+            <img src="~/IMG/fondo.jpg" style="height: 500px;width: 950px;float: right;">
+        }
+    </div>
+
+</body>
+</html>
+
+
+
+
+

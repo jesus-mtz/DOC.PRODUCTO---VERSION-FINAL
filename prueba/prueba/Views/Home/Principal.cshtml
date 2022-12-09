@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<style>
+    /*.tab-content {
+        position: relative;
+        overflow: hidden;*/
+/*        padding-top: 56.25%;*/
+    /*}*/
+</style>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    </li>
+</ul>
+<div class="tab-content container-fluid" id="myTabContent" style="height:100%;">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="height:100%;">
+        <iframe class="w-100 h-100" src="https://getbootstrap.com/docs/5.0/components/navs-tabs/" name="iframe_a" title="Iframe Example"></iframe>
+
+    </div>
+    <div class="tab-pane fade container-fluid" id="profile" role="tabpanel" aria-labelledby="profile-tab"  style="height:100%;">
+        <iframe class="w-100 h-100" src="https://pinetools.com/es/eliminar-saltos-linea" name="iframe_a" title="Iframe Example"></iframe>
+    </div>
+    <div class="tab-pane fade container-fluid" id="contact" role="tabpanel" aria-labelledby="contact-tab"  style="height:100%;">
+        <iframe class="w-100 h-100" src="@Url.Action("Index", "Home")" name="iframe_a" title="Iframe Example"></iframe>
+    </div>
+</div>
+

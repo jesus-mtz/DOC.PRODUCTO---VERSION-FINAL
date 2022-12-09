@@ -1,0 +1,116 @@
+﻿@model List<prueba.Models.FolderMap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DOCUMENTACIÓN DE PRODUCTO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    <style>
+
+        #cabecera {
+            color: #000000;
+            background-color: darkcyan;
+            height: 60px;
+            width: auto;
+        }
+
+
+        #menu {
+            background-color: #ffffff;
+            padding: 35px;
+            font-family: Candara;
+            font-size: 30px;
+        }
+
+        input[type=submit] {
+            padding: 5px 15px;
+            background: #ffffff;
+            border: 0 none;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-family: 'Arial Rounded MT';
+        }
+
+        input:hover[type=submit] {
+            background: #d0d0d0;
+        }
+
+        #contenido {
+            float: left;
+            height: 595px;
+            width: 1100.225px;
+        }
+
+        input[type=text] {
+            border: 2px solid #21f8f2;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="cabecera">
+        @using (Html.BeginForm("Index", "Documentacion", FormMethod.Get))
+        {
+            <center>
+                <div></div><br />
+                <label style="color: #ffffff; font-size: 21px; font-family:Candara;"><label style="color:#000000;"></label><b>Ingresa el número de parte</b></label>
+                <input name="noParte" id="buscar" type="text" value="@ViewBag.noParte" />
+                <input type="submit" value="BUSCAR" />
+            </center>
+        }
+    </div>
+
+
+    @if (Model.Count == 0)
+    {
+        <img src="~/IMG/fondo.jpg" style="height: 500px;width: 950px;float: right;">
+    }
+    else
+    {
+        foreach (var folder in Model)
+        {
+            foreach (var imagen in folder.Images)
+            {
+                <br />
+                <img src="~/DOCUMENTACION/@imagen.NameUrl" style="height: 400px;width: 600px;float: right;">
+            }
+
+        }
+
+        if (Model.Count == 1)
+        {
+            foreach (var folder in Model[0].Folders)
+            {
+                @Html.Partial("_MapFolder", folder)
+            }
+        }
+        else
+        {
+            foreach (var folder in Model)
+            {
+
+
+                @Html.Partial("_MapFolder", folder)}
+        }
+
+    }
+
+    <br />
+    @if (ViewBag.archivo != null)
+    {
+
+        <object data="~/DOCUMENTO.pdf" type="application/pdf" height="600" width="900"></object>
+    }
+</body>
+</html>
